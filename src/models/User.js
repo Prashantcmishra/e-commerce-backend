@@ -1,4 +1,4 @@
-import mongoose rom "monggoose";
+import mongoose from "monggoose";
 
 const userSchema = new mongoose.Schema(
     {
