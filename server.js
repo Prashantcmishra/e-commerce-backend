@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 
 import connectDB from "./src/config/db.js";
 import authRoutes from "./src/routes/authRoutes.js";
+import productRoutes from "./src/routes/productRoutes.js";
 
 
 dotenv.config();
@@ -32,6 +33,7 @@ app.get("/", (req, res) => {
 
 // Auth Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/products", productRoutes);
 
 
 
