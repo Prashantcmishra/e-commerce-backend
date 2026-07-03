@@ -16,7 +16,12 @@ const app = express();
 connectDB();
 
 // Middlewares
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Your React app URL
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
